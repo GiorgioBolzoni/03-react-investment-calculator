@@ -1,4 +1,3 @@
-// import { useState } from "react"
 import { useState } from "react";
 
 import UserInput from "./components/UserInput"
@@ -12,20 +11,24 @@ function App() {
     duration:10
 });
 
+// const [investmentResults, setInvestmentResults] = useState([]);
+
 function handleChange(inputIdentifier, newValue) {
   setUserInput(prevUserInput => {
       return {
         ...prevUserInput,
-          [inputIdentifier]: newValue
+          [inputIdentifier]: +newValue // il + modifica da stringa a numero
   };
 });
+    
+    // setInvestmentResults(results);
 }
 
 
   return (
     <>
       <UserInput userInputComponent={userInput} onChangeComponent={handleChange}/>
-      <ResultsTable inputComponent={userInput}/>
+      <ResultsTable inputComponent={userInput} />
     </>
   )
 }
