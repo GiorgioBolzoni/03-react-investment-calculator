@@ -4,19 +4,19 @@ export default function UserInput(){
                 <div id="user-input" className="input-group">
                     <label htmlFor="input-field">
                         <div>INITIAL INVESTMENT</div>
-                        <input type="text"/>
+                        <input type="number"/>
                     </label>
                     <label htmlFor="input-field">
                         <div>ANNUAL INVESTMENT</div>
-                        <input type="text"/>
+                        <input type="number"/>
                     </label>
                     <label htmlFor="input-field">
                         <div>EXPECTED RETURN</div>
-                        <input type="text"/>
+                        <input type="number"/>
                     </label>
                     <label htmlFor="input-field">
                         <div>DURATION</div>
-                        <input type="text"/>
+                        <input type="number"/>
                     </label>
 
                     
