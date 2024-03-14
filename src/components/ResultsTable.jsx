@@ -1,6 +1,7 @@
 // import 'src/util/investment.js';
 
-export default function ResultsTable(){
+export default function ResultsTable({inputComponent}){
+    console.log(inputComponent)
     return (
             <table id="result">
                 <thead>
