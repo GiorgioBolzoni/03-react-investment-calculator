@@ -11,7 +11,7 @@ function App() {
     duration:10
 });
 
-// const [investmentResults, setInvestmentResults] = useState([]);
+
 
 function handleChange(inputIdentifier, newValue) {
   setUserInput(prevUserInput => {
@@ -21,14 +21,15 @@ function handleChange(inputIdentifier, newValue) {
   };
 });
     
-    // setInvestmentResults(results);
 }
 
+  const inputIsValid = userInput.initialInvestment >= 0 && userInput.annualInvestment >= 0 && userInput && userInput.expectedReturn >= 0 && userInput.duration >= 1;
 
   return (
     <>
       <UserInput userInputComponent={userInput} onChangeComponent={handleChange}/>
-      <ResultsTable inputComponent={userInput} />
+      {inputIsValid && <ResultsTable inputComponent={userInput} /> }
+      {!inputIsValid && <p className="center fw-bold">Please, enter valid data</p>}
     </>
   )
 }
